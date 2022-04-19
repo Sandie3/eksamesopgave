@@ -1,0 +1,61 @@
+@font-face {
+	font-family: "Eurostile Normal";
+	font-style: normal;
+	font-weight: normal;
+	src: url("font/EuroStyleNormal.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Eurostile Bold";
+	font-style: normal;
+	font-weight: bold;
+	src: url("font/EurostileBold.ttf") format("truetype");
+}
+
+$red: #c01803;
+$nav: #363636;
+$header: #595959;
+$button: #b40003;
+$gray: #a9a8a4;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	background-color: #f2f2f2;
+}
+
+.App {
+	font-family: 'Eurostile Normal';
+	.content{
+		width: 80%;
+		margin: 0 auto;
+		margin-top: 20vh;
+	}
+}
+
+.sectionTitle{
+	width: 100%;
+	height: auto;
+	background-color: $header;
+	color: white;
+	margin: 0 auto;
+	padding: 1%;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 25px;
+	font-family: 'Eurostile Bold';
+}
+
+.sectionContent{
+	margin: 50px 0px;
+}
+
+@import './Header.scss';
+@import './Nav.scss';
+@import './About.scss';
+@import './Tours.scss';
+@import './Contact.scss'

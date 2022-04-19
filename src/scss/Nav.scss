@@ -1,0 +1,43 @@
+nav {
+	position: relative;
+	background-color: $nav;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	padding: 10px 10%;
+	.navLogo {
+		max-width: 130px;
+		max-height: 50px;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	a {
+		color: $gray;
+		text-decoration: none;
+		margin: 10px;
+	}
+	.searchBox {
+		align-self: center;
+		flex-grow: 1;
+		display: flex;
+		justify-content: flex-end;
+		input {
+			padding: 1%;
+			border: 1px solid $gray;
+			border-radius: 5px;
+			&[type=text] {
+				margin-right: 5px;
+				&::placeholder {
+					color: $gray;
+				}
+			}
+			&[type=submit] {
+				color: $gray;
+				background-color: transparent;
+			}
+		}
+	}
+}

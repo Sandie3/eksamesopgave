@@ -1,0 +1,17 @@
+.about{
+	height: 50vh;
+	.aboutContent{
+		display: flex;
+		p{
+			flex-grow: 2;
+			font-size: 20px;
+			line-height: 120%;
+		}
+		.aboutImg{
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}

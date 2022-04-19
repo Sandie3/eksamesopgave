@@ -1,0 +1,50 @@
+.tours{
+	margin-bottom: 80px;
+	.toursWrapper{
+		width: 100%;
+		height: auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 2% 2.5%;
+		.tourItem{
+			border: 1px solid $gray;
+			border-radius: 3px;
+			position: relative;
+			background-color: #fff;
+			img{
+				width: 100%;
+				height: auto;
+				border-radius: 3px 3px 0 0;
+			}
+			.tourContent{
+				padding: 5%;
+			}
+			.tourTitle{
+				display: inline;
+				font-family: 'Eurostile Bold';
+			}
+			.starImg{
+				width: 15px;
+				height: auto;
+				float: right;
+			}
+			.tourDate{
+				margin-top: 10px;
+				color: $gray;
+			}
+			.tourTeaser{
+				margin: 15px 0 50px 0;
+			}
+			button{
+				position: absolute;
+				bottom: 5%;
+				left: 5%;
+				background-color: $button;
+				padding: 10px;
+				color: white;
+				border: none;
+				border-radius: 5px;
+			}
+		}
+	}
+}
