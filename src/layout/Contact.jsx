@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { SectionTitle } from '../components/SectionTitle'
 import { SectionContent } from '../components/SectionContent'
-import { getInfo } from '../api/Contact'
+import { getInfo, postContact } from '../api/Contact'
 
 const Contact = () => {
 
@@ -16,6 +16,17 @@ const Contact = () => {
 			}
 		} )
 	}, [] )
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		postContact(e.target).then( res => {
+			if (res) {
+				console.log('sent')
+			}else{
+				console.log('error')
+			}
+		} )
+	}
 
 
 	return (
@@ -39,14 +50,14 @@ const Contact = () => {
 							</>
 						}
 					</div>
-					<form>
+					<form onSubmit={handleSubmit}>
 						<h3>Skriv til os</h3>
-						<input type="text" name="" id="" />
-						<input type="text" name="" id="" />
-						<input type="text" name="" id="" />
-						<input type="number" name="" id="" />
-						<textarea name="" id=""></textarea>
-						<input type="submit" name="" id="" />
+						<input type="text" name="name" id="name" placeholder='Name'/>
+						<input type="text" name="company" id="company" placeholder='Firma/organisation' />
+						<input type="text" name="email" id="email" placeholder='Email Adresse' />
+						<input type="number" name="phone" id="phone" placeholder='Telefon' />
+						<textarea name="message" id="message"  placeholder='Besked' ></textarea>
+						<input type="submit" name="submit" id="submit" value="Send" />
 					</form>
 				</div>
 			</SectionContent>

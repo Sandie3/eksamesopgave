@@ -4,6 +4,7 @@ import Navbar from './layout/Navbar';
 import About from './layout/About';
 import Tours from './layout/Tours';
 import Contact from './layout/Contact';
+import Footer from './layout/Footer';
 
 function App () {
 	return (
@@ -15,6 +16,7 @@ function App () {
 				<Tours />
 				<Contact />
 			</div>
+			<Footer />
 		</div>
 	);
 }

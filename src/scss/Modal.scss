@@ -1,0 +1,104 @@
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba($color: #000000, $alpha: .5);
+	display: none;
+
+	.modalWindow {
+		width: 50%;
+		height: 80vh;
+		overflow-y: scroll;
+		background-color: white;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: block;
+		border: 1px solid $gray;
+		border-radius: 5px;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
+		.modalTitle {
+			padding: 10px;
+			display: flex;
+			justify-content: space-between;
+			align-content: center;
+			h3 {
+				font-family: $fontBold;
+				display: inline;
+			}
+
+			.close {
+				float: right;
+				background-color: transparent;
+				border: none;
+				font-size: 16px;
+			}
+		}
+	}
+	.modalSlider{
+		padding: 10px;
+		width: 100%;
+		height: 300px;
+		.modalSliderImg{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.modalContent {
+		padding: 20px;
+
+		h1 {
+			font-family: $fontBold;
+			margin-bottom: 10px;
+		}
+
+
+		p{
+			margin-bottom: 10px;
+			font-size: 13px;
+		}
+		
+		ul {
+			margin-left: 30px;
+			li{
+				font-size: 13px;
+				&:last-child{
+					margin-bottom: 10px;
+				}
+			}
+		}
+		h4{
+			font-family: $fontBold;
+		}
+	}
+	.modalBot{
+		padding: 10px;
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		button{
+			display: block;
+			background-color: #6C757E;
+			border: none;
+			border-radius: 3px;
+			color: white;
+			padding: 8px 10px;
+		}
+	}
+}
+
+.active {
+	display: block !important;
+}
+
+.gray{
+	color: $gray;
+}

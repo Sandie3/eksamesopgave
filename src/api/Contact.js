@@ -9,3 +9,14 @@ export const getInfo = async () => {
 	return res;
 
 }
+
+export const postContact = async (formData) => {
+
+	let formdata = new FormData( formData )
+
+	let res = await axios.post( baseUrl + 'contact', formdata )
+		.then( res => { return res.data; } )
+		.catch( err => { return err.response.data } )
+	return res;
+
+}

@@ -3,17 +3,19 @@ import Logo from '../Assets/logo/logo.png'
 
 const Navbar = () => {
 	return (
-		<nav>
+		<nav id='nav'>
 			<div className="navLogo">
-				<img src={ Logo } alt="Logo" />
+				<a href="#top">
+					<img src={ Logo } alt="Logo" />
+				</a>
 			</div>
-				<a href="#about">Om os</a>
-				<a href="#">Produkter</a>
-				<a href="#">Kontakt</a>
-				<div className="searchBox">
-					<input type="text" placeholder='Search' />
-					<input type="submit" value="Search" />
-				</div>
+			<a href="#about">Om os</a>
+			<a href="#tours">Produkter</a>
+			<a href="#contact">Kontakt</a>
+			<div className="searchBox">
+				<input type="text" placeholder='Search' />
+				<input type="submit" value="Search" />
+			</div>
 		</nav>
 	)
 }

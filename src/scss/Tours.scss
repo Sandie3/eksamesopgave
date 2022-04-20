@@ -1,4 +1,5 @@
 .tours{
+	position: relative;
 	margin-bottom: 80px;
 	.toursWrapper{
 		width: 100%;
@@ -21,7 +22,7 @@
 			}
 			.tourTitle{
 				display: inline;
-				font-family: 'Eurostile Bold';
+				font-family: $fontBold;
 			}
 			.starImg{
 				width: 15px;
@@ -31,19 +32,21 @@
 			.tourDate{
 				margin-top: 10px;
 				color: $gray;
+				font-size: 15px;
 			}
 			.tourTeaser{
 				margin: 15px 0 50px 0;
 			}
 			button{
 				position: absolute;
-				bottom: 5%;
+				bottom: 2%;
 				left: 5%;
 				background-color: $button;
 				padding: 10px;
 				color: white;
 				border: none;
 				border-radius: 5px;
+				cursor: pointer;
 			}
 		}
 	}

@@ -16,9 +16,15 @@ header{
 		transform: translate(-50%, -50%);
 		display: grid;
 		grid-template-columns: auto auto auto;
+		height: auto;
+		gap: 50px;
 		.heroLogo{
-			width: 400px;
-			margin: 0 50px;
+			max-width: 500px;
+			min-width: 100px;
+			img{
+				width: 100%;
+				height: auto;
+			}
 		}
 		h1{
 			font-family: "Eurostile Bold";
@@ -26,4 +32,25 @@ header{
 			color: $red;
 		}
 	}
+	.arrow{
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		animation-name: arrow;
+  	animation-duration: 2s;
+		animation-iteration-count: infinite;
+		a{
+			img{
+				width: 100%;
+				height: 50px;
+			}
+		}
+	}
+}
+
+@keyframes arrow{
+	0%   {transform: translate(-50%, 0%);}
+  50%  {transform: translate(-50%, -20%);}
+  100% {transform: translate(-50%, 0%);}
 }

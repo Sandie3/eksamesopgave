@@ -1,9 +1,7 @@
-import React from 'react'
-
-const Modal = () => {
-	return (
-		<div>Modal</div>
-	)
+export const Modal = ( { children } ) => {
+	return <div id="modal" className='modal'>
+		<div className="modalWindow">
+		{ children }
+		</div>
+	</div>
 }
-
-export default Modal
