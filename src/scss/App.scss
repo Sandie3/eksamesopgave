@@ -81,4 +81,10 @@ footer{
 @import './Contact.scss';
 
 @import './Modal.scss';
-@import './Slider.scss'
+@import './Slider.scss';
+
+@media only screen and (max-width: 620px) {
+	.App{
+		min-width: 620px;
+	}
+}

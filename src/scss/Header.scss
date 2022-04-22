@@ -3,7 +3,7 @@ header{
 	width: 100%;
 	height: 100vh;
 	.headerLogo{
-		width: 130px;
+		width: 200px;
 		height: auto;
 		position: absolute;
 		top: 20px;
@@ -20,7 +20,7 @@ header{
 		gap: 50px;
 		.heroLogo{
 			max-width: 500px;
-			min-width: 100px;
+			min-width: 250px;
 			img{
 				width: 100%;
 				height: auto;
@@ -30,6 +30,7 @@ header{
 			font-family: "Eurostile Bold";
 			align-self: center;
 			color: $red;
+			font-size: 60px;
 		}
 	}
 	.arrow{
@@ -43,7 +44,7 @@ header{
 		a{
 			img{
 				width: 100%;
-				height: 50px;
+				height: 100px;
 			}
 		}
 	}
@@ -53,4 +54,13 @@ header{
 	0%   {transform: translate(-50%, 0%);}
   50%  {transform: translate(-50%, -20%);}
   100% {transform: translate(-50%, 0%);}
+}
+
+@media screen and ( max-width: 800px ) {
+	.heroText{
+		grid-template-columns: 1fr!important;
+		grid-template-rows: 1fr 1fr 1fr;
+		justify-items: center;
+		gap: 0!important;
+	}
 }

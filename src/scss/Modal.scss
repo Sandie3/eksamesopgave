@@ -9,10 +9,10 @@
 	overflow-y: scroll;
 	.modalWindow {
 		width: 50%;
-		height: max-content;
+		height: auto;
 		background-color: white;
 		display: block;
-		margin: 7% auto;
+		margin: 4% auto;
 		border: 1px solid $gray;
 		border-radius: 5px;
 		.modalTitle {
@@ -23,20 +23,21 @@
 			h3 {
 				font-family: $fontBold;
 				display: inline;
+				font-size: 40px;
 			}
 
 			.close {
 				float: right;
 				background-color: transparent;
 				border: none;
-				font-size: 16px;
+				font-size: 40px;
 			}
 		}
 	}
 	.modalSlider{
 		padding: 10px;
 		width: 100%;
-		height: 300px;
+		height: 500px;
 		.modalSliderImg{
 			width: 100%;
 			height: auto;
@@ -49,25 +50,26 @@
 		h1 {
 			font-family: $fontBold;
 			margin-bottom: 10px;
+			font-size: 30px;
 		}
-
 
 		p{
 			margin-bottom: 10px;
-			font-size: 13px;
+			font-size: 20px;
 		}
 		
 		ul {
 			margin-left: 30px;
 			li{
-				font-size: 13px;
+				font-size: 20px;
 				&:last-child{
-					margin-bottom: 10px;
+					margin-bottom: 30px;
 				}
 			}
 		}
 		h4{
 			font-family: $fontBold;
+			font-size: 20px;
 		}
 	}
 	.modalBot{
@@ -82,6 +84,7 @@
 			border-radius: 3px;
 			color: white;
 			padding: 8px 10px;
+			font-size: 20px;
 		}
 	}
 }
@@ -92,4 +95,54 @@
 
 .gray{
 	color: $gray;
+}
+
+
+@media screen and (max-width:1230px) {
+	.modalWindow{
+		width: 70%!important;
+	}
+}
+
+@media screen and (max-width:700px) {
+	.modalWindow{
+		width: 80%!important;
+		margin: 10% auto!important;
+		.modalTitle{
+			h3{
+				font-size: 30px!important;
+			}
+			.close{
+				font-size: 30px!important;
+			}
+		}
+		.modalContent{
+			h1{
+				font-size: 27px!important;
+			}
+			p{
+				margin-bottom: 20px!important;
+				font-size: 20px!important;
+			}
+			
+			ul {
+				margin-left: 30px;
+				li{
+					font-size: 20px;
+					&:last-child{
+						margin-bottom: 20px;
+					}
+				}
+			}
+			h4{
+				font-family: $fontBold;
+				font-size: 20px;
+			}
+		}
+		.modalBot{
+			button{
+				font-size: 20px;
+			}
+		}
+	}
 }

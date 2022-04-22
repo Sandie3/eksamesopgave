@@ -1,19 +1,25 @@
 .about{
-	height: 50vh;
 	.aboutContent{
 		display: flex;
 		gap: 5%;
 		p{
 			flex-grow: 2;
-			font-size: 20px;
 			line-height: 120%;
-			font-size: 17px;
+			font-size: 23px;
 		}
 		.aboutImg{
 			img{
 				width: 100%;
 				height: auto;
 			}
+		}
+	}
+}
+
+@media screen and ( max-width: 950px ) {
+	.aboutImg{
+		img{
+			display: none;
 		}
 	}
 }
