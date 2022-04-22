@@ -57,6 +57,12 @@ header{
 }
 
 @media screen and ( max-width: 800px ) {
+	.headerLogo{
+		top:5%!important;
+		left: 50%!important;
+		right: 50%;
+		transform: translate(-50%, 0);
+	}
 	.heroText{
 		grid-template-columns: 1fr!important;
 		grid-template-rows: 1fr 1fr 1fr;
