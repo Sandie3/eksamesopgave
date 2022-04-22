@@ -34,7 +34,7 @@ export const editTours = async (id, data ) => {
 
 export const deleteTours = async ( id ) => {
 
-	let res = await axios.post( baseUrl + 'tours/admin/' + id )
+	let res = await axios.delete( baseUrl + 'tours/admin/' + id )
 		.then( res => { return res.data; } )
 		.catch( err => { return err } )
 	return res;

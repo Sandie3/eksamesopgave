@@ -6,7 +6,7 @@ import { Modal } from '../components/Modal'
 
 const Contact = () => {
 
-		const [ message, setMessage ] = useState()
+	const [ message, setMessage ] = useState()
 	const [ loading, setLoading ] = useState( false )
 	const [ err, setErr ] = useState()
 	const [ modalContent, setModalContent ] = useState()

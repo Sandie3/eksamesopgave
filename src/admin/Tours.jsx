@@ -20,6 +20,16 @@ const Tours = () => {
 	const [ editorRoomtype, setEditorRoomtype ] = useState()
 	const today = new Date( new Date().getTime() - new Date().getTimezoneOffset() * 60000 ).toISOString().split( "T" )[ 0 ];
 
+	const [ update, setUpdate ] = useState( true )
+
+	let Update = () => {
+		if ( update === true ) {
+			setUpdate( false )
+		} else {
+			setUpdate( true )
+		}
+	}
+
 	useEffect( () => {
 		setLoading( true )
 		getTours().then( res => {
@@ -33,15 +43,16 @@ const Tours = () => {
 			setLoading( false )
 		} )
 
-	}, [] )
+	}, [ update ] )
 
 	let handleDelete = ( id ) => {
 		if ( window.confirm( "Delete tour?" ) ) {
 			deleteTours( id )
+			Update()
 		}
 	}
 
-	let openEditModal = ( id) => {
+	let openEditModal = ( id ) => {
 		document.querySelector( "#modal" ).classList.toggle( "active" )
 		setEditModalContent( tours[ id ] )
 		setEditorTeaser( tours[ id ].teaser )
@@ -65,6 +76,7 @@ const Tours = () => {
 		setEditorTeaser()
 		setEditorContent()
 		setEditorRoomtype()
+		Update()
 	}
 
 	const resetFileupload = ( e ) => {
@@ -88,6 +100,7 @@ const Tours = () => {
 			} else {
 				console.log( res )
 			}
+			Update()
 		} )
 	}
 
@@ -99,6 +112,7 @@ const Tours = () => {
 			} else {
 				console.log( 'Error on edit' )
 			}
+			Update()
 		} )
 	}
 
@@ -146,13 +160,13 @@ const Tours = () => {
 
 									<label htmlFor="teaser">
 										<span>teaser:</span>
-										<textarea name="teaser" id='teaser' defaultValue={ editorTeaser  } style={ { display: "none" } } cols="30" rows="10"></textarea>
+										<textarea name="teaser" id='teaser' defaultValue={ editorTeaser } style={ { display: "none" } } cols="30" rows="10"></textarea>
 										<RichTextEditor value={ editorTeaser } onChange={ setEditorTeaser } />
 									</label>
 
 									<label htmlFor="content">
 										<span>content:</span>
-										<textarea name="content" id='content' defaultValue={ editorContent  } style={ { display: "none" } } cols="30" rows="10"></textarea>
+										<textarea name="content" id='content' defaultValue={ editorContent } style={ { display: "none" } } cols="30" rows="10"></textarea>
 										<RichTextEditor value={ editorContent } onChange={ setEditorContent } />
 									</label>
 
