@@ -14,6 +14,7 @@ export const SliderItem = ( { children, width } ) => {
 
 const SliderWrapper = ( { children } ) => {
 	const [ activeIndex, setActiveIndex ] = useState( 0 );
+
 	const updateIndex = ( newIndex ) => {
 		if ( newIndex < 0 ) {
 			newIndex = React.Children.count( children ) - 1;

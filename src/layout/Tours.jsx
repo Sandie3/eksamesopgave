@@ -63,7 +63,7 @@ const Tours = () => {
 													new Date( t.traveldate ).toLocaleDateString( "da-DK", dateOptions )
 												}</p>
 												<p className='tourTeaser'>
-													{ t.teaser }
+												{ parser( t.teaser ) }
 												</p>
 												<button onClick={ () => handleModal( i ) }>Læs mere</button>
 											</div>

@@ -14,7 +14,7 @@ const Footer = () => {
 		getFooter().then( res => {
 			setLoading( true )
 			if ( res ) {
-				setFooter( res.footertext.replace( "FTA Travels", "<span>FTA Travels</span>" ) )
+				setFooter( res.footertext )
 				setLoading( false )
 				setErr( false )
 			} else {
