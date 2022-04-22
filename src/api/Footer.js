@@ -10,11 +10,11 @@ export const getFooter = async () => {
 
 }
 
-export const editFooter = async (data) => {
+export const editFooter = async ( data ) => {
 
-	let formdata = new FormData(data);
+	// let formdata = new FormData( data );
 
-	let res = await axios.put( baseUrl + 'footer/admin', formdata )
+	let res = await axios.put( baseUrl + 'footer/admin', data )
 		.then( res => { return res.data; } )
 		.catch( err => { return err } )
 	return res;

@@ -1,20 +1,36 @@
 .contact {
 	.contactWrapper {
 		display: grid;
+		grid-template-areas:
+		"a b b"
+    "a b b"
+    "c b b";
 		grid-template-columns: 1fr 1fr;
-		gap: 10%;
 		h3{
 			font-family: $fontBold;
 			font-size: 24px;
 			margin-bottom: 10px;
 		}
 		.info{
+			grid-area: a;
 			font-family: $font;
+			width: 80%;
+			height: auto;
 			p:nth-of-type(1){
 				font-weight: bold;
 			}
 		}
+		.newsletterWrapper{
+			grid-area: c;
+			width: 80%;
+			font-family: $font;
+			margin-top: 10px;
+			h5{
+				margin-bottom: 10px;
+			}
+		}
 		form{
+			grid-area: b;
 			display: block;
 			justify-self: center;
 			width: 100%;

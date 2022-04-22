@@ -15,6 +15,7 @@ const Footer = () => {
 		getFooter().then( res => {
 			if ( res ) {
 				setFooter(res)
+				setEditor(res.footertext)
 				setErr(false)
 			} else {
 				console.log( 'error' )
@@ -28,7 +29,8 @@ const Footer = () => {
 	let handleSubmit = ( e ) => {
 		e.preventDefault()
 		if (window.confirm("Edit footer?")) {	
-			editFooter( e.target ).then( res => {
+			console.log(e.target)
+			editFooter( { "footertext": e.target.footertext.value } ).then( res => {
 				if ( res ) {
 					console.log( res )
 				} else {
@@ -45,8 +47,11 @@ const Footer = () => {
 				<>
 					<h1>Edit footer</h1>
 					<form onSubmit={ handleSubmit }>
-						<input name="footertext" id='footertext' defaultValue={ editor } style={ { display: "none" } } />
-						<RichTextEditor value={ editor } onChange={ setEditor } />
+					<label htmlFor='footertext'>
+							Content:
+							<textarea name="footertext" id='footertext' defaultValue={ editor } style={ { display: "none" } } cols="30" rows="10"></textarea>
+							<RichTextEditor value={ editor } onChange={ setEditor } />
+						</label>
 						<input type="submit" value="Edit" />
 					</form>
 				</>

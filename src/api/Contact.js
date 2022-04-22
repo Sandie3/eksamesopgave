@@ -58,3 +58,14 @@ export const deleteContact = async ( id ) => {
 	return res;
 
 }
+
+export const postSubscription = async ( formData ) => {
+
+	let formdata = new FormData( formData )
+
+	let res = await axios.post( baseUrl + 'newssubscription', formdata )
+		.then( res => { return res.data; } )
+		.catch( err => { return null } )
+	return res;
+
+}
