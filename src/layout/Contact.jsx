@@ -111,7 +111,7 @@ const Contact = () => {
 						{
 							message && message
 						}
-						<input type="text" name="name" id="name" placeholder='Name' required />
+						<input type="text" name="name" id="name" placeholder='Navn' required />
 						<input type="text" name="company" id="company" placeholder='Firma/organisation' required />
 						<input type="text" name="email" id="email" placeholder='Email Adresse' required onChange={ e => Email( e ) } />
 						<input type="number" name="phone" id="phone" placeholder='Telefon' required onChange={ e => Phone( e ) } />
