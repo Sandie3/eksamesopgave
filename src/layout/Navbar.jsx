@@ -30,7 +30,7 @@ const Navbar = () => {
 						<Link to="admin">Admin</Link>
 					</div>
 
-					<div class="mobileNavIcon" onClick={ toggleNav }>
+					<div className="mobileNavIcon" onClick={ toggleNav }>
 						<div className="bar1"></div>
 						<div className="bar2"></div>
 						<div className="bar3"></div>
